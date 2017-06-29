@@ -8,10 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4ED7980A1F05BB2700CF3010 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED798091F05BB2700CF3010 /* main.m */; };
+		4ED798121F05BB4900CF3010 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED798111F05BB4900CF3010 /* Server.m */; };
+		4ED7981B1F05C0C800CF3010 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED7981A1F05C0C800CF3010 /* main.m */; };
+		4ED798211F05C0ED00CF3010 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED798201F05C0ED00CF3010 /* Client.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4ED798041F05BB2700CF3010 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4ED798161F05C0C800CF3010 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,10 +37,24 @@
 /* Begin PBXFileReference section */
 		4ED798061F05BB2700CF3010 /* KJMachPortServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KJMachPortServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED798091F05BB2700CF3010 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4ED798101F05BB4900CF3010 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		4ED798111F05BB4900CF3010 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
+		4ED798131F05BB5E00CF3010 /* ServerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerProtocol.h; sourceTree = "<group>"; };
+		4ED798181F05C0C800CF3010 /* KJMachPortClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KJMachPortClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ED7981A1F05C0C800CF3010 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4ED7981F1F05C0ED00CF3010 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		4ED798201F05C0ED00CF3010 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4ED798031F05BB2700CF3010 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ED798151F05C0C800CF3010 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				4ED798081F05BB2700CF3010 /* KJMachPortServer */,
+				4ED798191F05C0C800CF3010 /* KJMachPortClient */,
 				4ED798071F05BB2700CF3010 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				4ED798061F05BB2700CF3010 /* KJMachPortServer */,
+				4ED798181F05C0C800CF3010 /* KJMachPortClient */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +86,21 @@
 			isa = PBXGroup;
 			children = (
 				4ED798091F05BB2700CF3010 /* main.m */,
+				4ED798101F05BB4900CF3010 /* Server.h */,
+				4ED798111F05BB4900CF3010 /* Server.m */,
+				4ED798131F05BB5E00CF3010 /* ServerProtocol.h */,
 			);
 			path = KJMachPortServer;
+			sourceTree = "<group>";
+		};
+		4ED798191F05C0C800CF3010 /* KJMachPortClient */ = {
+			isa = PBXGroup;
+			children = (
+				4ED7981A1F05C0C800CF3010 /* main.m */,
+				4ED7981F1F05C0ED00CF3010 /* Client.h */,
+				4ED798201F05C0ED00CF3010 /* Client.m */,
+			);
+			path = KJMachPortClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +123,23 @@
 			productReference = 4ED798061F05BB2700CF3010 /* KJMachPortServer */;
 			productType = "com.apple.product-type.tool";
 		};
+		4ED798171F05C0C800CF3010 /* KJMachPortClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ED7981C1F05C0C800CF3010 /* Build configuration list for PBXNativeTarget "KJMachPortClient" */;
+			buildPhases = (
+				4ED798141F05C0C800CF3010 /* Sources */,
+				4ED798151F05C0C800CF3010 /* Frameworks */,
+				4ED798161F05C0C800CF3010 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KJMachPortClient;
+			productName = KJMachPortClient;
+			productReference = 4ED798181F05C0C800CF3010 /* KJMachPortClient */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +150,11 @@
 				ORGANIZATIONNAME = "Kristopher Johnson";
 				TargetAttributes = {
 					4ED798051F05BB2700CF3010 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = D5E423632K;
+						ProvisioningStyle = Automatic;
+					};
+					4ED798171F05C0C800CF3010 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = D5E423632K;
 						ProvisioningStyle = Automatic;
@@ -111,6 +174,7 @@
 			projectRoot = "";
 			targets = (
 				4ED798051F05BB2700CF3010 /* KJMachPortServer */,
+				4ED798171F05C0C800CF3010 /* KJMachPortClient */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +184,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED798121F05BB4900CF3010 /* Server.m in Sources */,
 				4ED7980A1F05BB2700CF3010 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ED798141F05C0C800CF3010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ED798211F05C0ED00CF3010 /* Client.m in Sources */,
+				4ED7981B1F05C0C800CF3010 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +306,22 @@
 			};
 			name = Release;
 		};
+		4ED7981D1F05C0C800CF3010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = D5E423632K;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4ED7981E1F05C0C800CF3010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = D5E423632K;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -249,6 +339,14 @@
 			buildConfigurations = (
 				4ED7980E1F05BB2700CF3010 /* Debug */,
 				4ED7980F1F05BB2700CF3010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4ED7981C1F05C0C800CF3010 /* Build configuration list for PBXNativeTarget "KJMachPortClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ED7981D1F05C0C800CF3010 /* Debug */,
+				4ED7981E1F05C0C800CF3010 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

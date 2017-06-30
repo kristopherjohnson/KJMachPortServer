@@ -44,6 +44,8 @@
 		4ED7981A1F05C0C800CF3010 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4ED7981F1F05C0ED00CF3010 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		4ED798201F05C0ED00CF3010 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
+		4ED798221F05DBF300CF3010 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4ED798231F05DBF300CF3010 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +69,10 @@
 		4ED797FD1F05BB2700CF3010 = {
 			isa = PBXGroup;
 			children = (
-				4ED798081F05BB2700CF3010 /* KJMachPortServer */,
 				4ED798191F05C0C800CF3010 /* KJMachPortClient */,
+				4ED798081F05BB2700CF3010 /* KJMachPortServer */,
+				4ED798221F05DBF300CF3010 /* LICENSE */,
+				4ED798231F05DBF300CF3010 /* README.md */,
 				4ED798071F05BB2700CF3010 /* Products */,
 			);
 			sourceTree = "<group>";

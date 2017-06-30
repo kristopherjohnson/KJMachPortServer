@@ -15,7 +15,8 @@
 
 typedef NS_ENUM(uint32_t, ServerMsgId) {
     ServerMsgIdNotify = 1,
-    ServerMsgIdExit = 2
+    ServerMsgIdExit = 2,
+    ServerMsgIdEcho = 3
 };
 
 #endif /* ServerProtocol_h */

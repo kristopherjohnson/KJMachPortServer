@@ -14,4 +14,6 @@
 
 - (void)sendExitMessage;
 
+- (void)sendEchoMessage:(NSString *)string;
+
 @end
